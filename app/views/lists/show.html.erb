@@ -1,10 +1,18 @@
 <div class="container">
   <h1> <%= @list.name %></h1>
+  <% if @list.photo.attached? %>
+    <%= cl_image_tag @list.photo.key %>
+  <% else %>
+    <%= image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>
+  <% end %>
   <div class="container">
-    <ul>
+    <div class="card mt-3">
       <% @list.movies.each do |movie| %>
-        <li>  <%= movie.title %> </li>
+        <div class="card-category">
+          <%= movie.title %>
+          <%= image_tag movie.poster_url %>
+        </div>
       <% end  %>
-    </ul>
+    </div>
   </div>
 </div>

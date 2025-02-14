@@ -62,11 +62,13 @@ end
 
 
 # Added
-gem "ostruct"
-gem 'rspec-rails', group: [ :test ]
-gem 'rails-controller-testing', group: [ :test ]
-gem "bootstrap", "~> 5.2"
 gem "autoprefixer-rails"
+gem "bootstrap", "~> 5.2"
+gem 'dotenv-rails', groups: [:development, :test]
 gem "font-awesome-sass", "~> 6.1"
-gem "simple_form"
+gem "ostruct"
+gem 'rails-controller-testing', group: [ :test ]
+gem 'rspec-rails', group: [ :test ]
 gem "sassc-rails"
+gem "simple_form"
+gem 'cloudinary', '~> 1.16.0'

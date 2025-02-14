@@ -12,4 +12,5 @@ Rails.application.routes.draw do
     resources :bookmarks, only: [:new, :create]
   end
   # root "posts#index"
+  root to: 'lists#index'
 end
