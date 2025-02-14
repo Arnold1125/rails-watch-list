@@ -1,6 +1,14 @@
 <div class="container">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Lists</h1>
+    <p>Create your costum movie-lists!</p>
+    <a class="btn btn-flat" href="#">Create</a>
+  </div>
+</div>
+
   <h1>Lists</h1>
-  <div class="card">
+  <div class="cards">
     <% List.all.each do |list| %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
         <%= list.name %>

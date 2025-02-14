@@ -8,11 +8,21 @@
   <div class="container">
     <div class="card mt-3">
       <% @list.movies.each do |movie| %>
-        <div class="card-category">
-          <%= movie.title %>
+        <div class="card-product">
           <%= image_tag movie.poster_url %>
+          <div class="card-product-infos">
+            <%= movie.title %>
+            <%= movie.overview %>
+          </div>
         </div>
       <% end  %>
     </div>
   </div>
 </div>
+
+
+
+        <%# <div class="card-category">
+          <%= movie.title %>
+          <%# <%= image_tag movie.poster_url %>
+        <%# </div> %>
