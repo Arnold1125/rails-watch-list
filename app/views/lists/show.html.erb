@@ -1,10 +1,14 @@
 <div class="container">
-  <h1> <%= @list.name %></h1>
-  <% if @list.photo.attached? %>
-    <%= cl_image_tag @list.photo.key %>
-  <% else %>
-    <%= image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>
-  <% end %>
+  <div class="container">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @list.photo.attached? ? cl_image_path(@list.photo.key) : 'https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png' %>);">
+  <div class="container">
+    <h1> <%= @list.name %> </h1>
+    <p>Create your costum movie-lists!</p>
+    <a class="btn btn-flat" href="#">Create</a>
+  </div>
+  </div>
+
+
   <div class="container">
     <div class="card mt-3">
       <% @list.movies.each do |movie| %>
@@ -26,3 +30,10 @@
           <%= movie.title %>
           <%# <%= image_tag movie.poster_url %>
         <%# </div> %>
+
+  <%# <h1> <%= @list.name</h1> %>
+  <%# <% if @list.photo.attached? %>
+    <%# <%= cl_image_tag @list.photo.key %>
+  <%# <% else %>
+    <%# <%= image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %> %> %> %>
+  <%# <% end %>
